@@ -1,0 +1,11 @@
+<h2>Projects</h2>
+
+{{#each model as |project|}}
+  <ul class='project'>
+    <li><h3>{{project.title}}</h3></li>
+    <li>{{project.stack}}</li>
+    <li><p>{{project.description}}</p></li>
+    <li><a href='{{project.repo}}' target='_blank'>Github</a></li>
+    <li><a href='{{project.live}}' target='_blank'>Live</a></li>
+  </ul>
+{{/each}}

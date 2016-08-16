@@ -1,0 +1,17 @@
+<h2>About Me</h2>
+
+<p>
+Hi! I’m Kira. I’m a Canadian web developer from Fredericton, NB. I’m based in Montreal now and love it here. I’m also passionate about justice and do what I can to spread reason.
+</p>
+<p>
+Right now I work with mostly Ruby on Rails and separate front-end frameworks, like Ember and React. I'm also trying to lerrn some fundamentals of CS, writing small programs in C, and staying curious exploring Elixir. This website is built with Ember backed by a Rails API. I love the tech and web development communities in Montreal which is mostly why I’m getting more involved. I host weekly meetups with a local skills incubator, <a href='https://lespitonneux.herokuapp.com' target='_blank'>Les Pitonneux</a>, and some of my favourite people in the world I met at <a href='http://montrealrb.com' target='_blank'>Montreal Ruby's</a> monthly ruby meetups.
+</p>
+<p>
+When I’m not on my computer I knit, do pilates, play violin, or just get lost exploring the city. I love travelling and politics. My dream is to work for an awesome tech company from a beach in Spain. Have fun looking around, or find me on <a href='https://twitter.com/kiraemclean' target='_blank'>twitter</a> or <a href='https://github.com/kiramclean/' target='_blank'>github</a>.</p>
+
+{{#each model as |quote|}}
+  <ul class='quote'>
+    <li>{{quote.quote}}</li>
+    <li><a href='{{quote.link}}' target='_blank'>{{quote.author}}</a></li>
+  </ul>
+{{/each}}
