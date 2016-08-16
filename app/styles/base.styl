@@ -1,9 +1,11 @@
 *
   transition all base-timing long-duration
+  box-sizing border-box
 
 body
-  font-family 'Circular Normal', 'Helvetica Neue', Helvetica, sans-serif
+  font-family base-font
   color gray
+  background-color white
 
 main
   width 85%
@@ -13,13 +15,17 @@ nav
   display flex
   justify-content space-between
   align-items center
+  padding big-space 0
+  ul-reset()
 
-nav ul li
-  list-style none
-  display inline
-  padding 10px
+  li
+    display inline
+    margin-right-not-last()
+
+  h1
+    font-size base-size
 
 a
-  text-decoration none
-  color main-color
   darker-on-hover()
+  color lightish-gray
+  text-decoration none

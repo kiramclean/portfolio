@@ -1,4 +1,35 @@
-darker-on-hover()
-  &:hover
-    color gray
+border(color = shade(@background-color, 5%))
+  border 1px solid color
 
+shadow(color = shade(@background-color, 10%))
+  box-shadow 1px 1px 1px color
+
+border-radius()
+  border-radius 2px
+
+darker-on-hover(color = gray)
+  &:hover
+    color color
+
+margin-right-not-last(space = space)
+  &:not(last-child)
+    margin-right space
+
+ul-reset()
+  ul
+    margin 0
+    padding 0
+  li
+    list-style: none
+
+chip()
+  old-bg = @background-color
+  margin-right-not-last()
+  border-radius()
+  background-color rgba(@color, 0.5)
+  color @color
+  display inline-block
+  padding small-space space
+  &:hover
+    background-color rgba(@color, 1)
+    color old-bg
