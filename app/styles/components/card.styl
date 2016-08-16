@@ -1,5 +1,5 @@
-card()
-  background-color purple
+card(bg = purple)
+  background-color bg
   color white
   padding space big-space
   border()
@@ -10,7 +10,6 @@ card()
 .cafe
 .quote
   card()
-
   a
     chip()
 
@@ -18,3 +17,9 @@ card()
 .quote
   ul-reset()
 
+// colors = teal purple light-purple orange teal
+//
+// for c, index in colors
+//   .list > ul:nth-child({index + 1})
+//     card(bg = c)
+//
