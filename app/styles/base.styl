@@ -3,9 +3,10 @@
   box-sizing border-box
 
 body
-  font-family base-font
-  color gray
   background-color white
+  color gray
+  font-family base-font
+  font-size base-font-size
 
 main
   width 85%
@@ -20,6 +21,15 @@ nav
 
   h1
     font-size base-size
+
+  li a
+    slow-color-transition()
+
+  li .active
+    border-radius()
+    background-color purple
+    color background-color
+    padding space
 
 a
   darker-on-hover()
