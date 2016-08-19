@@ -1,15 +1,27 @@
+above(size)
+  @media screen and (min-width: size)
+    {block}
+
+below(size)
+  @media screen and (max-width: size)
+    {block}
+
+// between(smaller_size, larger_size)
+//   @media screen and (min-width: smaller_size) and (max-width: larger_size)
+//     {block}
+
 border(color = shade(@background-color, 5%))
   border 1px solid color
 
 shadow(color = shade(@background-color, 10%))
   box-shadow 1px 1px 1px color
 
-border-radius()
-  border-radius 2px
+border-radius(size = 2px)
+  border-radius size
 
 darker-on-hover(color = gray)
   &:hover
-    color color
+    color darken(@color, 50%)
 
 margin-right-not-last(space = space)
   &:not(last-child)
@@ -27,14 +39,13 @@ ul-reset()
     list-style none
     display inline
 
-chip()
-  old-bg = @background-color
+chip(color = @color)
   margin-right-not-last()
   border-radius()
-  background-color rgba(@color, 0.5)
-  color @color
+  background-color rgba(color, 0.5)
+  color color
   display inline-block
   padding small-space space
   &:hover
     background-color rgba(@color, 1)
-    color old-bg
+    color background-color

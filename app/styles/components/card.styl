@@ -1,20 +1,20 @@
-card(bg = lighter-gray)
-  background-color bg
-  color purple
-  padding space big-space
-  border()
-  shadow()
+card(text = gray)
+  // background-color lighter-gray
+  color text
+  padding space 0
+  // border()
+  // shadow()
   border-radius()
 
 .project
 .cafe
-.quote
   card()
+
   a
-    chip()
+    chip(purple)
 
 .project
-  margin-bottom: space
+  margin-bottom big-space
 
   h2
     margin-top 0
@@ -23,9 +23,12 @@ card(bg = lighter-gray)
 .quote
   ul-reset()
 
-// colors = teal purple light-purple orange teal
-//
-// for c, index in colors
-//   .list > ul:nth-child({index + 1})
-//     card(bg = c)
-//
+.quote
+  background-color lighter-gray
+  card(orange)
+  border()
+  padding space
+  shadow()
+
+  a
+    chip(teal)
