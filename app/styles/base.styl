@@ -7,25 +7,33 @@ body
   color gray
   font-family base-font
   font-size base-font-size
+  padding space
+  width: 100%
 
 main
-  width 85%
+  max-width medium-screen
   margin 0 auto
+
+strong
+  font-family bold-font
 
 nav
   display flex
   justify-content space-between
   align-items center
-  padding big-space 0
+  padding big-space
   ul-reset()
+
+  li
+    display inline
 
   h1
     font-size base-size
 
   .active
-  .active
     color teal
     padding 6px 0
+    margin-bottom 6px
     border-bottom 3px solid teal
 
 a
@@ -33,7 +41,43 @@ a
   color lightish-gray
   text-decoration none
 
+// HOMEPAGE
 img
-  margin small-space
+  max-width 45vw
+  max-height 90vw
+  padding small-space
+  border-radius 12px
   object-fit contain
-  border-radius 5px
+
+.images
+  padding space
+  flex-center()
+
+  div
+    flex-column-center()
+
+.project
+  padding-bottom big-space
+
+  h2
+  a
+    display inline
+    margin-right-not-last()
+
+.quotes
+  flex-column-then-row()
+
+.quote
+  background linear-gradient(orange, tint(orange, 60%))
+  color white
+  padding space
+  border-radius()
+  margin-right-not-last()
+  ul-reset()
+
+  a
+    display block
+    font-size small
+
+    &::before
+      content '- '

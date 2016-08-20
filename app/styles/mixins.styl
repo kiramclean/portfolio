@@ -10,12 +10,12 @@ below(size)
 //   @media screen and (min-width: smaller_size) and (max-width: larger_size)
 //     {block}
 
-border(color = shade(@background-color, 5%))
-  border 1px solid color
-
-shadow(color = shade(@background-color, 10%))
-  box-shadow 1px 1px 1px color
-
+// border(color = shade(@background-color, 5%))
+//   border 1px solid color
+//
+// shadow(color = shade(@background-color, 10%))
+//   box-shadow 1px 1px 1px color
+//
 border-radius(size = 2px)
   border-radius size
 
@@ -27,9 +27,9 @@ margin-right-not-last(space = space)
   &:not(last-child)
     margin-right space
 
-slow-color-transition()
-  transition all ease-in-out 600ms
-
+// slow-color-transition()
+//   transition all ease-in-out 600ms
+//
 ul-reset()
   ul
     margin 0
@@ -37,15 +37,35 @@ ul-reset()
   li
     margin-right-not-last()
     list-style none
-    display inline
+//
+// chip(color = @color)
+//   margin-right-not-last()
+//   border-radius()
+//   background-color rgba(color, 0.5)
+//   color color
+//   display inline-block
+//   padding small-space space
+//   &:hover
+//     background-color rgba(@color, 1)
+//     color background-color
 
-chip(color = @color)
-  margin-right-not-last()
-  border-radius()
-  background-color rgba(color, 0.5)
-  color color
-  display inline-block
-  padding small-space space
-  &:hover
-    background-color rgba(@color, 1)
-    color background-color
+// FLEX
+flex-column-center()
+  display flex
+  flex-direction column
+  align-items center
+  justify-content center
+
+flex-center()
+  display flex
+  align-items center
+  justify-content center
+
+flex-column-then-row()
+  display flex
+  flex-direction column
+  align-items center
+  justify-content center
+  +above(small-screen)
+    flex-direction row
+

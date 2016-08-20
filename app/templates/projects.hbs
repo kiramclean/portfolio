@@ -2,10 +2,10 @@
   {{#each model as |project|}}
     <article class='project'>
       <h2>{{project.title}}</h2>
-      <strong>Stack: </strong>{{project.stack}}
-      <p>{{project.description}}</p>
       <a href='{{project.repo}}' target='_blank'>Source</a>
       <a href='{{project.live}}' target='_blank'>Live</a>
+      <p><strong>Stack: </strong> {{project.stack}}</p>
+      <p>{{project.description}}</p>
     </article>
   {{/each}}
 </div>
