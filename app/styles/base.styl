@@ -13,28 +13,34 @@ body
 main
   max-width medium-screen
   margin 0 auto
+  clear both
 
 strong
   font-family bold-font
 
 nav
-  display flex
-  justify-content space-between
-  align-items center
-  padding big-space
+  // display flex
+  // justify-content space-between
+  // align-items center
+  padding big-space 0
   ul-reset()
-
-  li
-    display inline
 
   h1
     font-size base-size
+    float right
 
   .active
     color teal
     padding 6px 0
     margin-bottom 6px
     border-bottom 3px solid teal
+
+  li > .active
+    display inline-block
+
+  +above(small-screen)
+    li
+      display inline
 
 a
   darker-on-hover()
